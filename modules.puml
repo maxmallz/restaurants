@@ -1,0 +1,12 @@
+@startuml
+package "lib" {
+  package "tests" {
+  }
+  package "front_of_house" {
+    package "hosting" {
+    }
+    package "serving" {
+    }
+  }
+}
+@enduml

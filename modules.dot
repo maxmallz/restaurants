@@ -1,0 +1,12 @@
+digraph packages {
+  node [shape=box];
+  n1 [label="lib"];
+  n2 [label="tests"];
+  n1 -> n2;
+  n3 [label="front_of_house"];
+  n1 -> n3;
+  n4 [label="hosting"];
+  n3 -> n4;
+  n5 [label="serving"];
+  n3 -> n5;
+}
