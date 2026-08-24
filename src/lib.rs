@@ -1,7 +1,5 @@
 mod front_of_house;
-use rand::{CryptoRng, Rng};
-
-pub use crate::front_of_house::hosting;
+use crate::front_of_house::hosting;
 
 pub fn add(left: u64, right: u64) -> u64 {
     left + right

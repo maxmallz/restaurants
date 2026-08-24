@@ -19,16 +19,14 @@ digraph packages {
   n8 -> n9;
   n10 [label="repository"];
   n1 -> n10;
-  n11 [label="mysql_equipment"];
+  n11 [label="equipment_repository"];
   n10 -> n11;
   n12 [label="service"];
   n1 -> n12;
-  n13 [label="equipment"];
+  n13 [label="equipment_service"];
   n12 -> n13;
-  n14 [label="external"];
+  n14 [label="health_service"];
   n12 -> n14;
-  n15 [label="health"];
-  n12 -> n15;
-  n16 [label="state"];
-  n1 -> n16;
+  n15 [label="state"];
+  n1 -> n15;
 }
