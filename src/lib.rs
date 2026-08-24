@@ -1,3 +1,8 @@
+mod front_of_house;
+use rand::{CryptoRng, Rng};
+
+pub use crate::front_of_house::hosting;
+
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
@@ -13,20 +18,9 @@ mod tests {
     }
 }
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-        fn serve_order() {}
-        fn take_payment() {}
-    }
-}
-
-fn eat_at_restaurant() {
+pub fn eat_at_restaurant() {
     // Absolute path
+    hosting::add_to_waitlist();
+    front_of_house::hosting::add_to_waitlist();
     crate::front_of_house::hosting::add_to_waitlist();
 }

@@ -45,6 +45,7 @@ plantuml modules.puml   # produces modules.png
 
 ```sh
 cargo run --bin rcvis -- src/lib.rs --format graphviz --out modules.dot
+cargo run --bin rcvis -- /Users/maxmallz/dev/equipment-analyzer/src/lib.rs --format graphviz --out modules.dot
 ```
 
 Render with [Graphviz](https://graphviz.org/) (`brew install graphviz`):

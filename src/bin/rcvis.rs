@@ -8,7 +8,10 @@ use clap::{Parser, ValueEnum};
 use syn::{Item, ItemMod};
 
 #[derive(Parser)]
-#[command(name = "rcvis", about = "Visualize the module tree of Rust source files")]
+#[command(
+    name = "rcvis",
+    about = "Visualize the module tree of Rust source files"
+)]
 struct Args {
     /// Rust source files to visualize (each becomes a root package)
     #[arg(required = true)]
@@ -161,7 +164,7 @@ fn render_graphviz_node(
     for child in &node.children {
         render_graphviz_node(child, Some(&id), out, counter);
     }
-    id
+    id.to_owned()
 }
 
 fn render_tree(roots: &[ModuleNode]) -> String {
